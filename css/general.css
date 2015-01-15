@@ -1,0 +1,75 @@
+@CHARSET "UTF-8";
+
+/* #################################### */
+/* ######        global          ###### */
+/* #################################### */
+
+body {
+	width : 95%;
+}
+
+/* #################################### */
+/* ######    page d'entete       ###### */
+/* #################################### */
+
+h1.entete {
+	text-align : center;
+	color : #0066AA;
+}
+
+/* #################################### */
+/* ######    pied de page        ###### */
+/* #################################### */
+
+.footer {
+	font-size : 12px;
+	text-decoration : italic;
+	color : grey;
+	text-align : center;
+	vertical-align : bottom;
+}
+
+/* #################################### */
+/* ######    page de login       ###### */
+/* #################################### */
+
+/* style pour les cellules de page de login pour entrer dans l'appli */
+
+section.login {
+	height : 92%;
+	text-align : center;
+}
+form.login {
+/*	background-color : pink;*/
+	margin : 10px auto 0px auto;
+	text-align : center;
+	width : 520px;
+}
+
+fieldset.login{
+	border: 3px solid #5B8BAB;
+	padding-bottom:5px;
+	width : 520px;
+}
+
+legend.login {
+	color: #005FA9;
+	font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	background-color: transparent;
+}
+
+div.login {
+	display : block;
+	background-color: transparent;
+	padding-bottom:10px;
+}
+
+p.login {
+	display : inline-block;
+	width : 150;
+	font-size: 14px;
+	background-color: transparent;
+}
+
