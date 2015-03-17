@@ -34,7 +34,7 @@ while ($r_prob = $problems->fetch())
 				<div class="form_pub">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 				<div class="form_pub"><label for="recevant" class="form_public"><?php echo $t_form_p8;?></label><input type="text" id="recevant" name="recevant"></div>
 				<div class="form_pub"><label for="visiteur" class="form_public"><?php echo $t_form_p9;?></label><input type="text" id="visiteur" name="visiteur"></div>
-				<div class="form_pub"><label for="cdg" class="form_public"><?php echo $t_form_p10;?></label><input type="text" id="cdg" name="cdg"></div>
+				<div class="form_pub"><label for="cdg" class="form_public"><?php echo $t_form_p10;?></label><select id="cdg" name="cdg"><option>Ligue du Centre</option><option>District du Cher</option><option>District d'Eure-et-Loir</option><option>District de l'Indre</option><option>District d'Indre-et-Loire</option><option>District du Loir-et-Cher</option><option>District du Loiret</option></select></div>
 				<div class="form_pub"><label for="categorie" class="form_public"><?php echo $t_form_p11;?></label><select id="categorie" name="categorie"><option>Senior</option><option>Autre</option></select></div>
 				<div class="form_pub"><label for="division" class="form_public"><?php echo $t_form_p12;?></label><input type="text" id="division" name="division"></div>
 				<div class="form_pub"><label for="poule" class="form_public"><?php echo $t_form_p13;?></label><input type="text" id="poule" name="poule" size="2"></div>

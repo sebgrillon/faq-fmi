@@ -21,14 +21,15 @@ if(!isset($_POST['descriptif']))
 				<div class="form_pub">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 				<div class="form_pub"><label for="recevant" class="form_public"><?php echo $t_form_p8;?></label><input type="text" id="recevant" name="recevant"></div>
 				<div class="form_pub"><label for="visiteur" class="form_public"><?php echo $t_form_p9;?></label><input type="text" id="visiteur" name="visiteur"></div>
-				<div class="form_pub"><label for="cdg" class="form_public"><?php echo $t_form_p10;?></label><input type="text" id="cdg" name="cdg"></div>
+				<div class="form_pub"><label for="cdg" class="form_public"><?php echo $t_form_p10;?></label><select id="cdg" name="cdg"><option>Ligue du Centre</option><option>District du Cher</option><option>District d'Eure-et-Loir</option><option>District de l'Indre</option><option>District d'Indre-et-Loire</option><option>District du Loir-et-Cher</option><option>District du Loiret</option></select></div>
 				<div class="form_pub"><label for="categorie" class="form_public"><?php echo $t_form_p11;?></label><select id="categorie" name="categorie"><option>Senior</option><option>Autre</option></select></div>
 				<div class="form_pub"><label for="division" class="form_public"><?php echo $t_form_p12;?></label><input type="text" id="division" name="division"></div>
 				<div class="form_pub"><label for="poule" class="form_public"><?php echo $t_form_p13;?></label><input type="text" id="poule" name="poule" size="2"></div>
 				<div class="form_pub"><label for="support" class="form_public"><?php echo $t_form_p14;?></label><select id="support" name="support"><option>Tablette Archos fournie</option><option>Autre tablette</option><option>Interface web</option></select></div>
 				<div class="form_pub"><label for="rubrique" class="form_public"><?php echo $t_form_p15;?></label><select id="rubrique" name="rubrique"><option>Pr&eacute;paration</option><option>Feuille de match</option></select></div>
 				<div class="form_pub"><label for="etape" class="form_public"><?php echo $t_form_p16;?></label><select id="etape" name="etape"><option>Pr&eacute;paration</option><option>Avant-match</option><option>Match en cours/mi-temps</option><option>Apr&egrave;s-match</option></select></div>
-				<p class="form_pub"><label for="descriptif" class="form_public"><?php echo $t_form_p17;?></label><textarea id="descriptif" name="descriptif" rows="5" cols="25"></textarea></p>
+				<div class="form_pub">&nbsp;</div>
+				<p class="form_pub"><label for="descriptif" class="form_public"><?php echo $t_form_p17;?></label><textarea id="descriptif" name="descriptif" rows="5" cols="85"></textarea></p>
 				<p class="form_pub">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Valider">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 			</fieldset>
 		</form>
@@ -44,6 +45,120 @@ if(!isset($_POST['descriptif']))
 else
 {
 	include 'contenus/entete.php';
+	$incomplet = '';
+	
+	if(isset($_POST['nom'])) {
+		$nom = $_POST['nom']; 
+	}
+		else {
+			$nom = '';
+			$incomplet .= 'Nom obligatoire. ';
+		}
+	if(isset($_POST['prenom'])) {
+		$prenom = $_POST['prenom'];
+	}
+		else {
+			$prenom = '';
+			$incomplet .= 'Prénom obligatoire. ';
+		}
+	if(isset($_POST['club'])) {
+		$club = $_POST['club'];
+	}
+		else {
+			$club = '';
+		}
+	if(isset($_POST['role'])) {
+		$role = $_POST['role'];
+	}
+		else {
+			$role = '';
+		}
+	if(isset($_POST['tel'])) {
+		$tel = $_POST['tel'];
+	}
+		else {
+			$tel = '';
+		}
+	if(isset($_POST['mail'])) {
+		$mail = $_POST['mail'];
+	}
+		else {
+			$mail = '';
+		}
+	if ($tel=='' && $mail=='') {
+		$incomplet .= 'Téléphone OU Email obligatoire. ';
+	}		
+	if(isset($_POST['date_match'])) {
+		$date_match = $_POST['date_match'];
+		$incomplet .= 'Date du match obligatoire. ';
+	}
+		else {
+			$date_match = '';
+		}
+	if(isset($_POST['recevant'])) {
+		$recevant = $_POST['recevant'];
+	}
+		else {
+			$recevant = '';
+		}
+	if(isset($_POST['visiteur'])) {
+		$visiteur = $_POST['visiteur'];
+	}
+		else {
+			$visiteur = '';
+		}
+	if ($recevant=='' || $visiteur=='') {
+		$incomplet .= 'Clubs recevant ET visiteur obligatoires. ';
+	if(isset($_POST['cdg'])) {
+		$cdg = $_POST['cdg'];
+	}
+		else {
+			$cdg = '';
+		}
+	if(isset($_POST['categorie'])) {
+		$categorie = $_POST['categorie'];
+	}
+		else {
+			$categorie = '';
+		}
+	if(isset($_POST['division'])) {
+		$division = $_POST['division'];
+	}
+		else {
+			$division = '';
+		}
+	if(isset($_POST['poule'])) {
+		$poule = $_POST['poule'];
+	}
+		else {
+			$poule = '';
+		}
+	if(isset($_POST['support'])) {
+		$support = $_POST['support'];
+	}
+		else {
+			$support = '';
+		}
+	if(isset($_POST['rubrique'])) {
+		$rubrique = $_POST['rubrique'];
+	}
+		else {
+			$rubrique = '';
+		}
+	if(isset($_POST['etape'])) {
+		$etape = $_POST['etape'];
+	}
+		else {
+			$etape = '';
+		}
+	if(isset($_POST['descriptif'])) {
+		$descriptif = $_POST['descriptif'];
+	}
+		else {
+			$descriptif = '';
+		}
+	
+	
 	?>
 			<div class="form_pvalid">En cours de validation...</div>
 		</body>
