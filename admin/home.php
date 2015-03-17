@@ -1,7 +1,7 @@
 <?php
 //On inclut pour chaque page, l'entete générale au site (html, css, connexion bdd, ...)
 include '../outils/connexbase.php';
-include '../outils/textes.php';
+include '../contenus/textes.php';
 include '../contenus/entete.php';
 ?>
 <nav></nav>
@@ -14,5 +14,5 @@ include '../contenus/entete.php';
 
 <?php
 //On inclut pour chaque page, le bas de page générale au site (html, css, connexion bdd, ...)
-include 'piedpage.php';
+include '../contenus/piedpage.php';
  ?>

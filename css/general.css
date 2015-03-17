@@ -30,6 +30,48 @@ h1.entete {
 }
 
 /* #################################### */
+/* ######    page publique       ###### */
+/* #################################### */
+
+/* style pour les cellules de la page publique */
+
+.chapeau {
+	margin : 20px 20px 20px 10px;
+	text-align : center;
+	line-height : 30px;
+	color: #000000;
+	font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
+	font-size: 16px;
+	font-weight: 100;
+}
+
+section.probleme {
+}
+
+
+section.probleme li {
+	margin : 20px auto 0px auto;
+	width : 1000px;
+	text-align : justify;
+	line-height : 22px;
+	list-style-type : square;
+	color: #005FA9;
+	font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
+	font-size: 15px;
+	font-weight: 700;
+}
+
+section.probleme p {
+	margin : 5px auto 40px auto;
+	width : 900px;
+	text-align : justify;
+	color: #ff8000;
+	font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+}
+
+/* #################################### */
 /* ######    page de login       ###### */
 /* #################################### */
 
@@ -71,5 +113,82 @@ p.login {
 	width : 150;
 	font-size: 14px;
 	background-color: transparent;
+}
+
+/* #################################### */
+/* ######    formulaire public   ###### */
+/* #################################### */
+
+/* style pour les cellules de page de formulaire public */
+
+section.form_public {
+	text-align : center;
+	margin : 0px auto 40px auto;
+}
+form.form_public {
+	margin : 0px auto 0px auto;
+	text-align : center;
+	width : 1000px;
+	display : block;
+}
+
+fieldset.form_public{
+	border: 3px solid #5B8BAB;
+	padding-bottom:5px;
+	text-align : center;
+/*	width : 100%;*/
+}
+
+legend.form_public {
+	color: #005FA9;
+	font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+	background-color: transparent;
+	text-align : center;
+}
+
+div.form_pub {
+	display : inline-block;
+	columns : 2;
+	-webkit-columns : 2;
+	-moz-columns : 2;
+	padding-left : 30px;
+	padding-top : 10px;
+/*	padding-bottom : 10px;*/
+	vertical-align : middle;
+}
+div.form_pub:nth-child(19) {
+	display : inline-block;
+	columns : 2;
+	-webkit-columns : 2;
+	-moz-columns : 2;
+	padding-left : 30px;
+	padding-top : 10px;
+/*	padding-bottom : 10px;*/
+	vertical-align : middle;
+	width:418px;
+}
+
+p.form_pub {
+	padding-left : 30px;
+	padding-top : 10px;
+/*	padding-bottom : 10px;*/
+	vertical-align : middle;
+	text-align : center;
+}
+
+label.form_public {
+	display : block;
+/*	float : left;*/
+	font-size: 14px;
+	background-color: transparent;
+	vertical-align : middle;
+	text-align : left;
+	width : 200px;
+}
+
+label.form_public input {
+/*	float : left;*/
 }
 
