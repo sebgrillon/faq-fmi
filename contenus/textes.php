@@ -25,4 +25,12 @@ $t_form_p15 ="Rubrique :";
 $t_form_p16 ="Etape :";
 $t_form_p17 ="Descriptif :";
 $t_chapeau_faq = "Bienvenue sur la FAQ d&eacute;di&eacute;e &agrave; la Feuille de Match Informatis&eacute;e.<br>Vous trouverez ci-dessous les probl&egrave;mes rencontr&eacute;s couramment et les solutions que l'on peut y apporter.<br>Si votre probl&egrave;me n'appara&icirc;t pas, vous pouvez nous le soumettre gr&acirc;ce au formulaire en bas de page.";
+$t_form_non_renseigne ="Le formulaire est vide ou incomplet, veuillez le remplir compl&egrave;tement avant de cliquer sur le bouton Valider :<br><br>";
+$t_etat1 = "1 - Soumis";
+$t_etat2 = "2 - Propos&eacute;";
+$t_etat3 = "3 - Accept&eacute;";
+$t_etat4 = "4 - Pr&eacute;par&eacute;";
+$t_etat5 = "5 - Valid&eacute;";
+$t_etat6 = "6 - Publi&eacute;";
+$t_form_reussi = "Votre probl&egrave;me a &eacute;t&eacute; soumis avec succ&egrave;s. Nous vous r&eacute;pondrons dans les meilleurs d&eacute;lais.<br><br>";
 ?>

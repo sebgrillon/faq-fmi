@@ -148,6 +148,26 @@ legend.form_public {
 	text-align : center;
 }
 
+div.form_erreur {
+	margin : 0px auto 0px auto;
+	width : 1000px;
+	color: #ff0000;
+	font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	background-color: transparent;
+	text-align : center;
+}
+div.form_reussi {
+	margin : 0px auto 0px auto;
+	width : 1000px;
+	color: #000000;
+	font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	background-color: transparent;
+	text-align : center;
+}
 div.form_pub {
 	display : inline-block;
 	columns : 2;
