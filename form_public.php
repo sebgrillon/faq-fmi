@@ -180,7 +180,7 @@ include 'outils/fonctions.php';
 			$req_decl = "INSERT INTO declarant (nom,prenom, club, role, tel, mail) VALUES ('".$_POST['nom']."','".$_POST['prenom']."','".$_POST['club']."','".$_POST['role']."','".$_POST['tel']."','".$_POST['mail']."')";
 			$bdd->query($req_decl);
 			$lastiddeclarant = $bdd->lastInsertId();
-			$req_prob = "INSERT INTO problems (id_declarant,descriptif,etat) VALUES ($lastiddeclarant,'".$_POST['descriptif']."','".$t_etat1."')";
+			$req_prob = "INSERT INTO problems (id_declarant,descriptif,etat) VALUES ($lastiddeclarant,'".$_POST['descriptif']."','".$t_etat6."')";
 			$bdd->query($req_prob);
 			$lastidproblem = $bdd->lastInsertId();
 			$req_det = "INSERT INTO details (id_pb, date_match, opposants, competition, support, rubrique, etape) VALUES ($lastidproblem,'".conv_date_fr_en($_POST['date_match'])."','".$_POST['recevant']." - ".$_POST['visiteur']."','".$_POST['cdg']."#".$_POST['categorie']."#".$_POST['division']."#".$_POST['poule']."#"."','".$_POST['support']."','".$_POST['rubrique']."','".$_POST['etape']."')";
@@ -191,6 +191,7 @@ include 'outils/fonctions.php';
 	        die('Erreur : ' . $e->getMessage());
 		}
 		echo "<div class='form_reussi'>".$t_form_reussi."</div>";
+		header('refresh:6;url=index.php');
 	}
 
 	//On inclut pour chaque page, le bas de page générale au site (html, css, connexion bdd, ...)

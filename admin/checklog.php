@@ -6,8 +6,10 @@ $_SESSION['prenom'] = '';
 $_SESSION['dernier_acces'] = '';
 $_SESSION['ipaddr'] = '';
 $_SESSION['fonction'] = '';
+$_SESSION['droits'] = '';
 $_SESSION['cdg'] = '';
 
+include '../contenus/textes.php';
 include "../outils/connexbase.php";
 //include "../tools/fonctions.php";
 
@@ -17,7 +19,7 @@ if (!$r_user)
 {
 include '../contenus/entete.php';
 ?>
-		<div class="erreur">Nom d'utilisateur ou mot de passe erron&eacute; ! Vous serez redirig&eacute; vers la page d'acc&eagrave;s dans quelques secondes...</div>
+		<div class="erreur"><?php echo $t_mauvaislogin;?></div>
 	</body>
 </html>
 <?php
@@ -29,10 +31,11 @@ else
 	$_SESSION['dernier_acces'] = time();
 	$_SESSION['ipaddr'] = $_SERVER['REMOTE_ADDR'];
 	$_SESSION['id'] = $r_user[0];
-	$_SESSION['nom'] = $rep1[1];
-	$_SESSION['prenom'] = $rep1[2];
-	$_SESSION['fonction'] = $rep1[4];
-	$_SESSION['cdg'] = $rep1[3];
+	$_SESSION['nom'] = $r_user[2];
+	$_SESSION['prenom'] = $r_user[3];
+	$_SESSION['fonction'] = $r_user[5];
+	$_SESSION['droits'] = $r_user[1];
+	$_SESSION['cdg'] = $r_user[4];
 
 	header('Refresh: 0; url=\'home.php\'');
 	ob_flush();

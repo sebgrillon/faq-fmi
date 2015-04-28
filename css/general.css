@@ -212,3 +212,28 @@ label.form_public input {
 /*	float : left;*/
 }
 
+/* #################################### */
+/* ######      page admin        ###### */
+/* #################################### */
+
+/* style pour les cellules de page de login pour entrer dans l'appli */
+
+div.menu_admin {
+	width : 100%;
+	height : 40px;
+	vertical-align : middle;
+	text-align : center;
+	color: #005FA9;
+	font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	background-color: transparent;
+}
+a.menu_admin {
+	color: #005FA9;
+	font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	background-color: transparent;
+}
+

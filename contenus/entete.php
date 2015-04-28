@@ -1,5 +1,4 @@
 <?php
-include 'contenus/textes.php';
 echo"<html>";
 echo "<head>";
 echo "<title>".$t_titre_site."</title>";

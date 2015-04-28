@@ -7,6 +7,7 @@ $_SESSION['dernier_acces'] = '';
 $_SESSION['ipaddr'] = '';
 $_SESSION['fonction'] = '';
 $_SESSION['cdg'] = '';
+$_SESSION['droits'] = '';
 
 if(!isset($_POST['pseudo']))
 {
@@ -56,9 +57,10 @@ else
 		$_SESSION['dernier_acces'] = time();
 		$_SESSION['ipaddr'] = $_SERVER['REMOTE_ADDR'];
 		$_SESSION['id'] = $r_user[0];
-		$_SESSION['nom'] = $rep1[1];
-		$_SESSION['prenom'] = $rep1[2];
-	
+		$_SESSION['nom'] = $rep1[2];
+		$_SESSION['prenom'] = $rep1[3];
+		$_SESSION['droits'] = $rep1[1];
+		
 		header('Refresh: 0; url=\'home.php\'');
 		ob_flush();
 	}
